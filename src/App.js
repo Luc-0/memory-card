@@ -51,6 +51,9 @@ function App() {
 
   return (
     <div>
+      <header className="header">
+        <h1>Memory Game</h1>
+      </header>
       <div className="imgDisplay">{cards}</div>
     </div>
   );
