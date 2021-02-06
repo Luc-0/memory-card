@@ -1,0 +1,11 @@
+.scoreboard {
+  position: fixed;
+  top: 1%;
+  left: 50%;
+  width: 15%;
+  text-align: center;
+  transform: translateX(-50%);
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 5px;
+}

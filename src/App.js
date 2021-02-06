@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import Card from './Components/Card';
 import './styles/App.css';
+import Card from './Components/Card';
+import Scoreboard from './Components/Scoreboard';
 
 function App() {
   const [imagesSrc, setImagesSrc] = useState(getImagesSrc());
+  const [currentScore, setCurrentScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
 
   function importAllImages(r) {
     return r.keys().map(r);
@@ -54,6 +57,7 @@ function App() {
       <header className="header">
         <h1>Memory Game</h1>
       </header>
+      <Scoreboard currentScore={currentScore} bestScore={bestScore} />
       <div className="imgDisplay">{cards}</div>
     </div>
   );
