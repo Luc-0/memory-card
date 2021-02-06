@@ -7,6 +7,7 @@ function App() {
   const [imagesSrc, setImagesSrc] = useState(getImagesSrc());
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
+  const [clickedImages, setClickedImages] = useState([]);
 
   function importAllImages(r) {
     return r.keys().map(r);
@@ -23,6 +24,36 @@ function App() {
   function handleImageClick(e) {
     // Shuffle images Src
     setImagesSrc(shuffleArray(imagesSrc));
+    scoreboardUpdate(e.target.src);
+  }
+
+  function scoreboardUpdate(imgSrc) {
+    const imgName = getImageName(imgSrc);
+
+    if (clickedImages.includes(imgName)) {
+      // Check if is the best score
+      if (currentScore > bestScore) {
+        setBestScore(currentScore);
+      }
+      // Reset current score/clicked images
+      setCurrentScore(0);
+      setClickedImages([]);
+    } else {
+      const newCurrentScore = currentScore + 1;
+
+      // Add clicked image
+      setClickedImages([...clickedImages, imgName]);
+
+      setCurrentScore(newCurrentScore);
+      if (newCurrentScore > bestScore) {
+        setBestScore(newCurrentScore);
+      }
+    }
+  }
+
+  function getImageName(imgSrc) {
+    // Get image name by removing file full path and file extensions
+    return imgSrc.replace(/^.*[\\\/]/, '').split('.')[0];
   }
 
   function shuffleArray(array) {
