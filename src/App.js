@@ -90,11 +90,13 @@ function App() {
 
   return (
     <div>
-      <header className="header">
+      <header className="app-header">
         <h1>Memory Game</h1>
+        <div className="app-scoreboard">
+          <Scoreboard currentScore={currentScore} bestScore={bestScore} />
+        </div>
       </header>
-      <Scoreboard currentScore={currentScore} bestScore={bestScore} />
-      <div className="imgDisplay">{cards}</div>
+      <div className="app-imgDisplay">{cards}</div>
     </div>
   );
 }

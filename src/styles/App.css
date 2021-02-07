@@ -7,21 +7,33 @@ body {
   padding: 0;
 }
 
-.imgDisplay {
+.app-imgDisplay {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
+  padding-top: 80px;
 }
 
-.header {
+.app-header {
+  position: fixed;
   display: flex;
   align-items: center;
-  height: 60px;
+  min-height: 80px;
+  height: 12%;
   width: 100%;
   padding: 1% 2%;
   margin-bottom: 2%;
   background-color: black;
   color: white;
+}
+
+.app-scoreboard {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12%;
+  min-width: 100px;
 }

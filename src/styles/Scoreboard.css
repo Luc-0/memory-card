@@ -1,11 +1,9 @@
 .scoreboard {
-  position: fixed;
-  top: 1%;
-  left: 50%;
-  width: 15%;
   text-align: center;
-  transform: translateX(-50%);
+  padding: 5px;
   background-color: white;
-  border: 3px solid white;
+  border: 3px solid black;
   border-radius: 5px;
+  color: black;
+  width: 100%;
 }
