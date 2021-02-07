@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './styles/App.css';
 import Card from './Components/Card';
 import Scoreboard from './Components/Scoreboard';
@@ -8,6 +8,11 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [clickedImages, setClickedImages] = useState([]);
+
+  // Shuffle images on page load
+  useEffect(() => {
+    setImagesSrc(shuffleArray(imagesSrc));
+  }, []);
 
   function importAllImages(r) {
     return r.keys().map(r);
