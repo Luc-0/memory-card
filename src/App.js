@@ -8,11 +8,20 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [bestScore, setBestScore] = useState(0);
   const [clickedImages, setClickedImages] = useState([]);
+  const [showWinMessage, setShowWinMessage] = useState(false);
 
   // Shuffle images on page load
   useEffect(() => {
     setImagesSrc(shuffleArray(imagesSrc));
   }, []);
+
+  useEffect(() => {
+    const maxScore = imagesSrc.length;
+
+    if (currentScore === maxScore) {
+      setShowWinMessage(true);
+    }
+  }, [currentScore]);
 
   function importAllImages(r) {
     return r.keys().map(r);
@@ -27,9 +36,16 @@ function App() {
   }
 
   function handleImageClick(e) {
-    // Shuffle images Src
-    setImagesSrc(shuffleArray(imagesSrc));
-    scoreboardUpdate(e.target.src);
+    if (!showWinMessage) {
+      // Shuffle images Src
+      setImagesSrc(shuffleArray(imagesSrc));
+      scoreboardUpdate(e.target.src);
+    }
+  }
+
+  function closeWinMessage() {
+    setShowWinMessage(false);
+    resetCurrentScore();
   }
 
   function scoreboardUpdate(imgSrc) {
@@ -54,6 +70,11 @@ function App() {
         setBestScore(newCurrentScore);
       }
     }
+  }
+
+  function resetCurrentScore() {
+    setCurrentScore(0);
+    setClickedImages([]);
   }
 
   function getImageName(imgSrc) {
@@ -90,6 +111,16 @@ function App() {
 
   return (
     <div>
+      {showWinMessage ? (
+        <div className="app-win-box">
+          <div className="app-win-message">
+            <p>Congratulations, you beat the game!</p>
+          </div>
+          <button onClick={closeWinMessage} className="app-win-close-btn">
+            x
+          </button>
+        </div>
+      ) : null}
       <header className="app-header">
         <h1>Memory Game</h1>
         <div className="app-scoreboard">
