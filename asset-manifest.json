@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/memory-card/static/css/main.d3468009.chunk.css",
+    "main.js": "/memory-card/static/js/main.1805a5e9.chunk.js",
+    "main.js.map": "/memory-card/static/js/main.1805a5e9.chunk.js.map",
+    "runtime-main.js": "/memory-card/static/js/runtime-main.e60de1de.js",
+    "runtime-main.js.map": "/memory-card/static/js/runtime-main.e60de1de.js.map",
+    "static/js/2.9aabb92c.chunk.js": "/memory-card/static/js/2.9aabb92c.chunk.js",
+    "static/js/2.9aabb92c.chunk.js.map": "/memory-card/static/js/2.9aabb92c.chunk.js.map",
+    "index.html": "/memory-card/index.html",
+    "static/css/main.d3468009.chunk.css.map": "/memory-card/static/css/main.d3468009.chunk.css.map",
+    "static/js/2.9aabb92c.chunk.js.LICENSE.txt": "/memory-card/static/js/2.9aabb92c.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "/memory-card/static/media/1.06521d9a.jpg",
+    "static/media/10.jpg": "/memory-card/static/media/10.cd3301c1.jpg",
+    "static/media/11.jpg": "/memory-card/static/media/11.321b66df.jpg",
+    "static/media/12.jpg": "/memory-card/static/media/12.dbe2be62.jpg",
+    "static/media/2.jpg": "/memory-card/static/media/2.2d7204b6.jpg",
+    "static/media/3.jpg": "/memory-card/static/media/3.db45a3d9.jpg",
+    "static/media/4.jpg": "/memory-card/static/media/4.2f87af7c.jpg",
+    "static/media/5.jpg": "/memory-card/static/media/5.42cb2316.jpg",
+    "static/media/6.jpg": "/memory-card/static/media/6.448fe6f4.jpg",
+    "static/media/7.jpg": "/memory-card/static/media/7.ac1ab42f.jpg",
+    "static/media/8.jpg": "/memory-card/static/media/8.b7f9dfa5.jpg",
+    "static/media/9.jpg": "/memory-card/static/media/9.f2868051.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e60de1de.js",
+    "static/js/2.9aabb92c.chunk.js",
+    "static/css/main.d3468009.chunk.css",
+    "static/js/main.1805a5e9.chunk.js"
+  ]
+}
