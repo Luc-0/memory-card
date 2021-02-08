@@ -93,7 +93,11 @@ function App() {
       <header className="app-header">
         <h1>Memory Game</h1>
         <div className="app-scoreboard">
-          <Scoreboard currentScore={currentScore} bestScore={bestScore} />
+          <Scoreboard
+            currentScore={currentScore}
+            bestScore={bestScore}
+            maxScore={imagesSrc.length}
+          />
         </div>
       </header>
       <div className="app-imgDisplay">{cards}</div>
